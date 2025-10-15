@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'echo "Building the project..."'
-                sh 'sleep 3' // Simulate a build step
+                //sh 'sleep 3' // Simulate a build step
                 
         }
         stage('Test') {
