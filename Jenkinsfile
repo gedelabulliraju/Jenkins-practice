@@ -18,8 +18,6 @@ pipeline {
             }
         }
     }
-}
-
     post {
         always {
             echo 'This will always run'
@@ -37,3 +35,6 @@ pipeline {
             echo 'This will run only if the state of the pipeline has changed'
         }
     }
+}
+
+    
