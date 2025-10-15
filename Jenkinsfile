@@ -2,13 +2,16 @@ pipeline {
     agent {
         label 'AGENT-1'
     }
+    options {
+        timeout(time: 10, unit: 'MINUTES') // Timeout after 10 minutes)
+        }
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
                 sh 'echo "Building the project..."'
+                sh 'sleep 10' // Simulate a build step
                 
-            }
         }
         stage('Test') {
             steps {
