@@ -1,10 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        lablel 'AGENT-1'
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'echo "Building the project..."'
+                
             }
         }
         stage('Test') {
